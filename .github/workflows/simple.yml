@@ -1,0 +1,19 @@
+name: Shell Commands
+
+# what triggers the job to appear
+on: [push]
+
+jobs:
+  run-shell-command:
+    # runs on a vm.  each vm can be linux windows and so-on.
+    runs-on: ubuntu-latest
+    # jobs contain steps; this will be an array of objects that each represent a step
+    steps:
+      - name: echo a string
+        # 'run' lets us run some bash command (presumably other things for non-unix stuff)
+        run: echo "Hello man"
+      - name: multiline script
+        # The pipe allows us to run multiple commands.
+        run: | 
+          node -v
+          npm -v 

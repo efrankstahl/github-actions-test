@@ -1,0 +1,23 @@
+name: Ali
+age: 28
+address: "dwewahfe aufe: wefwafea"
+active: true
+key:
+  key: value
+  key2: 33
+  key3:
+    keyoo: moreval
+    keyee: excessive key
+
+array:
+  - item1
+  - item2
+  - key: value
+
+objectsArray:
+  - key: value
+  - key: value
+    - key: value
+    - key2: value
+    - key24: value
+  - key: value
