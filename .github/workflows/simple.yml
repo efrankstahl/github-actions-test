@@ -23,3 +23,13 @@ jobs:
           print(platform.processor())
         # Now we specify which shell it should run on -python
         shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+        # Powershell is the default shell on Windows machines
+        # we can specify a different shell, though.
+      - name:  Directory Bash
+        run: pwd
+        shell: bash
