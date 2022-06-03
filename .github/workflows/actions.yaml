@@ -1,0 +1,20 @@
+name: Actions Workflow
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        # summoning an action from another public github.
+        uses: actions/hello-world-javascript-action@v1
+        with:
+            who-to-greet: John
+      - name: Log Greeting Time
+        # referencing a previous step
+        # uhhhh this is an object that contains all of our 'steps'
+        # it references them by step id, which you must create
+        run: echo "${{ steps.greet.outputs.time}}"
+        # is 'time' the output? supposedly you find these in
+        # the documentation for the actions you're using.
