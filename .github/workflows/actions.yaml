@@ -11,7 +11,7 @@ jobs:
           - pwd
       - name: Checkout
         # auths with my repo and fetches the code and checkout into the commit that triggered the workflow
-        # a pushed commit will cause the workflow to run
+        # a pushed commit will cause the workflow to run....
         uses: actions/checkout@v1
         # an equivalent to git clone or git fetch
       - name: Check files after checkout
