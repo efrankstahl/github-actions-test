@@ -16,4 +16,10 @@ jobs:
         # The pipe allows us to run multiple commands.
         run: | 
           node -v
-          npm -v 
+          npm -v
+      - name: python Command
+        run: |
+          import platform
+          print(platform.processor())
+        # Now we specify which shell it should run on -python
+        shell: python
