@@ -1,10 +1,13 @@
 name: Actions Workflow
 on:
-  schedule:
+  push:
+    branches:
+      - master
+  #schedule:
     # minutes, hours, day of month, month, day of the week
     # crontab guru is good web site
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+   # - cron: "0/5 * * * *"
+   # - cron: "0/6 * * * *"
   pull_request:
     types: [closed, assigned, opened, reopened]
 
